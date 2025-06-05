@@ -1,34 +1,92 @@
-# DocN8NAgent
-# Implementación de Agentes de IA para Apalancar el BPO Documental
+# DocN8NAgent 🤖📄
+*Sistema de Agentes de IA para Procesamiento Documental Bancario*
 
-Este documento presenta una investigación detallada sobre cómo los agentes de inteligencia artificial (IA) pueden optimizar el *Business Process Outsourcing* (BPO) documental, un banco líder en Colombia. El objetivo es mejorar la eficiencia operativa, reducir costos y elevar la experiencia del cliente, abordando desafíos clave como la integración tecnológica, la seguridad de datos y el cumplimiento normativo.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
----
+**DocN8NAgent** es un sistema avanzado de procesamiento documental que utiliza inteligencia artificial para automatizar la gestión de documentos en el sector bancario. El sistema está optimizado para ejecutarse en **sistemas sin GPU**, utilizando únicamente CPU para máxima compatibilidad.
 
-## Contexto del BPO Documental en el Sector Bancario
+## 🎯 Características Principales
 
-El BPO documental implica la externalización de procesos relacionados con la gestión de documentos, como:
+- **🔍 OCR Múltiple**: Tesseract + EasyOCR para máxima precisión
+- **📋 Clasificación Inteligente**: Identifica automáticamente tipos de documentos
+- **📊 Extracción de Datos**: NLP avanzado para extraer información clave  
+- **✅ Validación Automática**: Verifica integridad y detecta posibles fraudes
+- **🌐 API REST**: Integración fácil con sistemas existentes
+- **💻 CLI Amigable**: Interfaz de línea de comandos para uso directo
+- **⚡ Optimizado para CPU**: Funciona sin necesidad de GPU dedicada
 
-- **Digitalización**: Conversión de documentos físicos a formatos digitales.
-- **Procesamiento**: Clasificación, extracción de datos y enrutamiento.
-- **Verificación**: Validación de información para cumplimiento normativo y prevención de fraudes.
+## 🚀 Inicio Rápido (CPU Optimizado)
 
-  Esto se aplica a operaciones críticas como:
+### Pre-requisitos
+- Python 3.8+ 
+- Sistema Linux/macOS/Windows
+- 4GB RAM mínimo (8GB recomendado)
 
-- Apertura de cuentas.
-- Solicitudes de préstamos e hipotecas.
-- Gestión de reportes regulatorios.
+### Instalación Automática
+```bash
+# Clonar repositorio
+git clone <repository-url>
+cd DocN8NAgent
 
-La creciente demanda de digitalización en la banca, impulsada por expectativas de clientes y la transición a sistemas *paperless*, hace del BPO documental un área estratégica.
+# Ejecutar instalación automática para CPU
+python install_deps_cpu.py
 
----
+# O usar script de inicio rápido
+./quick_start.sh demo
+```
 
-## Rol de la Inteligencia Artificial en el BPO Documental
+### Instalación Manual
+```bash
+# Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+# o venv\Scripts\activate en Windows
 
-La IA puede transformar el BPO documental al automatizar tareas repetitivas y mejorar la precisión. Las principales aplicaciones incluyen:
+# Instalar dependencias CPU-optimizadas
+pip install -r requirements.txt
 
-### 1. Clasificación de Documentos
-- **Descripción**: Modelos de aprendizaje automático categorizan documentos según su tipo o contenido.
+# Instalar dependencias del sistema (Linux)
+sudo apt-get install tesseract-ocr tesseract-ocr-spa poppler-utils
+
+# Descargar modelo de spaCy
+python -m spacy download es_core_news_sm
+```
+
+## 📖 Uso
+
+### 1. Demostración Rápida
+```bash
+python demo.py
+```
+
+### 2. Servidor API
+```bash
+python -m src.api.main
+# Servidor en: http://localhost:8000
+# Documentación: http://localhost:8000/docs
+```
+
+### 3. CLI Simple
+```bash
+# Verificar estado
+python -m src.cli_simple status
+
+# Procesar documento
+python -m src.cli_simple process documento.pdf
+
+# Ver historial
+python -m src.cli_simple history
+```
+
+### 4. Script de Inicio Rápido
+```bash
+./quick_start.sh demo    # Ejecutar demostración
+./quick_start.sh api     # Iniciar servidor API  
+./quick_start.sh cli     # Usar CLI
+```
 - **Beneficio**: Facilita la organización y el acceso en sistemas digitales.
 
 ### 2. Extracción de Datos

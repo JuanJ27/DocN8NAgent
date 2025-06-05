@@ -1,0 +1,61 @@
+# DocN8NAgent - Requirements for CPU-only systems
+# Optimized for systems without dedicated GPU
+
+# Core ML and AI libraries (CPU optimized)
+torch>=2.0.0 --index-url https://download.pytorch.org/whl/cpu
+transformers>=4.30.0
+sentence-transformers>=2.2.0
+langchain>=0.1.0
+langchain-community>=0.0.20
+
+# Document processing
+pypdf2>=3.0.0
+pytesseract>=0.3.10
+opencv-python-headless>=4.8.0  # Headless version for servers
+pillow>=10.0.0
+python-docx>=0.8.11
+pdf2image>=1.16.0
+
+# OCR and text processing (lightweight)
+easyocr>=1.7.0
+spacy>=3.6.0
+nltk>=3.8.0
+regex>=2023.0.0
+unidecode>=1.3.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# API and web framework
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+
+# File handling and utilities
+python-multipart>=0.0.6
+aiofiles>=23.0.0
+watchdog>=3.0.0
+
+# Logging and monitoring
+loguru>=0.7.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Development tools
+black>=23.0.0
+flake8>=6.0.0
+pre-commit>=3.3.0
+
+# Additional CPU-optimized libraries
+click>=8.0.0  # For CLI
+rich>=13.0.0  # For beautiful CLI output
+httpx>=0.24.0  # For HTTP requests
+nest-asyncio>=1.5.0  # For nested async loops
+
+# Image processing alternatives (lighter)
+imageio>=2.31.0
+scikit-image>=0.20.0
